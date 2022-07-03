@@ -6,7 +6,7 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 corsProxy.createServer({
-    originWhitelist: ['http://localhost:3000', 'https://whitesands-stake-hipforcrypto.vercel.app'],
+    originWhitelist: ['http://localhost:3000', 'https://whitesands-stake-hipforcrypto.vercel.app', 'https://stake.whitesands.game', 'https://claim.whitesands.game'],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
